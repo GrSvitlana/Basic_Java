@@ -24,7 +24,6 @@ Second level:
 Написать метод, который в качестве параметра принимает номер года и
 возвращает true, если год високосный и false, если год невисокосный.
  */
-
 public class HomeWork_5 {
 	public static void main(String[] args) {
 		
@@ -33,7 +32,6 @@ public class HomeWork_5 {
 		thirdTask();
 		fourthTask();
 		
-		
 	}
 	
 	// firstTask -------------------------------------------------------------------------------------------------------
@@ -41,12 +39,10 @@ public class HomeWork_5 {
 		String walking, rain;
 		boolean canWalk;
 		
-		if (isRain() == true)
-			rain = "";
-		else
-			rain = " no";
+		if (isRain()) rain = "";
+		else rain = " no";
 		
-		if (isWeekend() == true && isRain() == false) {
+		if (isWeekend() && isRain() == false) {
 			canWalk = true;
 			walking = "can";
 			System.out.printf("You %s go for a walk because today is %s and there is%s rain %n%n", walking, writeDay(dayOfWeek()), rain);
@@ -83,12 +79,9 @@ public class HomeWork_5 {
 		
 		int day = dayOfWeek();
 		
-		if (day >= 1 && day <= 5)
-			isWeekend = false;
-		else if (day == 0 || day == 6)
-			isWeekend = true;
-		else
-			System.out.println("Input date is not correct");
+		if (day >= 1 && day <= 5) isWeekend = false;
+		else if (day == 0 || day == 6) isWeekend = true;
+		else System.out.println("Input date is not correct");
 		
 		return isWeekend;
 	}
@@ -130,7 +123,7 @@ public class HomeWork_5 {
 		if (isEdekaOpen == true || isReweOpen) canBuy = true;
 		else canBuy = false;
 		
-		System.out.println("I can buy the food It’s " + canBuy);
+		System.out.println("I can buy the food It is " + canBuy);
 		System.out.print("-".repeat(100));
 		System.out.println();
 	}

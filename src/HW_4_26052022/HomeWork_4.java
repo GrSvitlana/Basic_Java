@@ -28,7 +28,7 @@ Second level:
 
  */
 
-public class Main {
+public class HomeWork_4 {
 	public static void main(String[] args) {
 		
 		firstTask();
