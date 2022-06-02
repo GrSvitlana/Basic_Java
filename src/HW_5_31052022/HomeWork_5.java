@@ -42,15 +42,14 @@ public class HomeWork_5 {
 		if (isRain()) rain = "";
 		else rain = " no";
 		
-		if (isWeekend() && isRain() == false) {
+		if (isWeekend() && !isRain()) {
 			canWalk = true;
 			walking = "can";
-			System.out.printf("You %s go for a walk because today is %s and there is%s rain %n%n", walking, writeDay(dayOfWeek()), rain);
 		} else {
 			canWalk = false;
 			walking = "can not";
-			System.out.printf("You %s go for a walk because today is %s and there is%s rain %n%n", walking, writeDay(dayOfWeek()), rain);
 		}
+		System.out.printf("You %s go for a walk because today is %s and there is%s rain %n%n", walking, writeDay(dayOfWeek()), rain);
 		System.out.println("Can walk is " + canWalk);
 		System.out.print("-".repeat(100));
 		System.out.println();
@@ -65,8 +64,6 @@ public class HomeWork_5 {
 		
 		if (yesno.equals("y")) {
 			isRain = true;
-		} else if (yesno.equals("n")) {
-			isRain = false;
 		} else {
 			System.out.println("Input date is not correct");
 		}
@@ -79,9 +76,7 @@ public class HomeWork_5 {
 		
 		int day = dayOfWeek();
 		
-		if (day >= 1 && day <= 5) isWeekend = false;
-		else if (day == 0 || day == 6) isWeekend = true;
-		else System.out.println("Input date is not correct");
+		if (day == 0 || day == 6) isWeekend = true;
 		
 		return isWeekend;
 	}
@@ -93,20 +88,14 @@ public class HomeWork_5 {
 	}
 	
 	public static String writeDay(int day) {
-		switch (day) {
-			case 1:
-				return "Monday";
-			case 2:
-				return "Tuesday";
-			case 3:
-				return "Wednesday";
-			case 4:
-				return "Thursday";
-			case 5:
-				return "Friday";
-			default:
-				return "Weekend";
-		}
+		return switch (day) {
+			case 1 -> "Monday";
+			case 2 -> "Tuesday";
+			case 3 -> "Wednesday";
+			case 4 -> "Thursday";
+			case 5 -> "Friday";
+			default -> "Weekend";
+		};
 	}
 	
 	// secondTask ------------------------------------------------------------------------------------------------------
@@ -120,8 +109,7 @@ public class HomeWork_5 {
 		System.out.println("Tell me please is Rewe open? True or false");
 		boolean isReweOpen = scanner.nextBoolean();
 		
-		if (isEdekaOpen == true || isReweOpen) canBuy = true;
-		else canBuy = false;
+		canBuy = isEdekaOpen || isReweOpen;
 		
 		System.out.println("I can buy the food It is " + canBuy);
 		System.out.print("-".repeat(100));
@@ -138,11 +126,7 @@ public class HomeWork_5 {
 		double temperature2 = scanner.nextDouble();
 		boolean correct;
 		
-		if (temperature1 > 100 && temperature2 < 100) {
-			correct = true;
-		} else {
-			correct = false;
-		}
+		correct = temperature1 > 100 && temperature2 < 100;
 		
 		System.out.println("The device works correct is " + correct);
 		System.out.print("-".repeat(100));
@@ -160,8 +144,7 @@ public class HomeWork_5 {
 	
 	public static boolean leapYear(int a) {
 		
-		if (((a % 4 == 0) && (a % 100 != 0) || (a % 400 == 0))) return true;
-		else return false;
+		return (a % 4 == 0) && (a % 100 != 0) || (a % 400 == 0);
 	}
 }
 
