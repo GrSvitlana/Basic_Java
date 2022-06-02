@@ -62,13 +62,15 @@ public class HomeWork_4 {
 		int result = a * (b + (c / d));
 		
 		System.out.println("Calculate expression >> " + a + " * (" + b + " + (" + c + " / " + d + ")) = " + result);
-		System.out.println("------------------------------------------------------------------------------------------");
+		System.out.print("-".repeat(100));
+		System.out.println();
 	}
 	
 	public static void secondTask() {
 		System.out.println("Task 2");
 		System.out.println("Hello " + writeName() + "!");
-		System.out.println("------------------------------------------------------------------------------------------");
+		System.out.print("-".repeat(100));
+		System.out.println();
 		
 	}
 	
@@ -84,7 +86,8 @@ public class HomeWork_4 {
 	public static void thirdTask() {
 		System.out.println("Task 3");
 		System.out.println("Converted amount in USD is " + convector());
-		System.out.println("------------------------------------------------------------------------------------------");
+		System.out.print("-".repeat(100));
+		System.out.println();
 	}
 	
 	public static double convector() {
@@ -104,17 +107,15 @@ public class HomeWork_4 {
 		if (sizePizza > 24) {
 			
 			System.out.println("Extra calories there will be " + calculateCalories(sizePizza) + " as opposed to a pizza with a diameter of 24 cm");
-			System.out.println("------------------------------------------------------------------------------------------");
 		} else if (sizePizza == 24) {
 			System.out.println("The pizzas are the same with a diameter of 24 cm and the calories are the same " + calculateCalories(1, sizePizza));
-			System.out.println("------------------------------------------------------------------------------------------");
 		} else if (sizePizza <= 0) {
 			System.out.println("Entered data is not correct");
-			System.out.println("------------------------------------------------------------------------------------------");
 		} else {
 			System.out.println("Fewer calories there will be " + (-1 * calculateCalories(sizePizza)) + " as opposed to a pizza with a diameter of 24 cm");
-			System.out.println("------------------------------------------------------------------------------------------");
 		}
+		System.out.print("-".repeat(100));
+		System.out.println();
 	}
 	
 	public static double calculateCalories(double diameterPizza) {
@@ -172,7 +173,8 @@ public class HomeWork_4 {
 			}
 			
 			System.out.println("The results of " + operationType + " two numbers: " + firstNumber + " and " + secondNumber + " is " + result);
-			System.out.println("------------------------------------------------------------------------------------------");
+			System.out.print("-".repeat(100));
+			System.out.println();
 		}
 	}
 	
@@ -201,7 +203,8 @@ public class HomeWork_4 {
 		double a = valueRandom();
 		System.out.printf("Value - a - with 3 digits after decimal point is %.3f ", a);
 		System.out.println();
-		System.out.println("------------------------------------------------------------------------------------------");
+		System.out.print("-".repeat(100));
+		System.out.println();
 	}
 	
 	public static double valueRandom() {

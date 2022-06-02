@@ -27,11 +27,11 @@ Second level:
 public class HomeWork_5 {
 	public static void main(String[] args) {
 		
-		//firstTask();
-		//secondTask();
-		//thirdTask();
-		//fourthTask();
-	
+		firstTask();
+		secondTask();
+		thirdTask();
+		fourthTask();
+		
 	}
 	
 	// firstTask -------------------------------------------------------------------------------------------------------
@@ -64,10 +64,9 @@ public class HomeWork_5 {
 		
 		if (yesno.equals("y")) {
 			isRain = true;
-		} else {
+		} else if (!yesno.equals("y") && !yesno.equals("n")) {
 			System.out.println("Input date is not correct");
 		}
-		
 		return isRain;
 	}
 	
