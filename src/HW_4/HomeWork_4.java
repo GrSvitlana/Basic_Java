@@ -1,4 +1,4 @@
-package HW_4_26052022;
+package HW_4;
 
 import java.util.Scanner;
 

@@ -1,4 +1,4 @@
-package HW_5_31052022;
+package HW_5;
 
 import java.util.Calendar;
 import java.util.Scanner;
@@ -27,11 +27,11 @@ Second level:
 public class HomeWork_5 {
 	public static void main(String[] args) {
 		
-		firstTask();
-		secondTask();
-		thirdTask();
-		fourthTask();
-		
+		//firstTask();
+		//secondTask();
+		//thirdTask();
+		//fourthTask();
+	
 	}
 	
 	// firstTask -------------------------------------------------------------------------------------------------------
