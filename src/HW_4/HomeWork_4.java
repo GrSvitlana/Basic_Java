@@ -105,7 +105,6 @@ public class HomeWork_4 {
 		double sizePizza = console.nextDouble();
 		
 		if (sizePizza > 24) {
-			
 			System.out.println("Extra calories there will be " + calculateCalories(sizePizza) + " as opposed to a pizza with a diameter of 24 cm");
 		} else if (sizePizza == 24) {
 			System.out.println("The pizzas are the same with a diameter of 24 cm and the calories are the same " + calculateCalories(1, sizePizza));
