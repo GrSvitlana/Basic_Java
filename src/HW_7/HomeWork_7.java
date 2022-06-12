@@ -46,16 +46,23 @@ public class HomeWork_7 {
 	
 	public static void thirdTask() {
 		Scanner scanner = new Scanner(System.in);
-		System.out.println("How many articles you want to buy:");
+		System.out.println("How many articles do you want to buy:");
 		int count = scanner.nextInt();
 		double price = 89.99;
+		double amount;
 		
 		if (count <= 0) {
 			System.out.println("It's a pity. See you next time");
 		} else {
-			System.out.printf("The amount of purchase %.2f%n", count == 1 ? price * 0.9 : (price * count) * 0.85);
+			
+			switch (count) {
+				case 1 -> amount = price;
+				case 2 -> amount = price * 1.8;
+				default -> amount = price * count * 0.85;
+			}
+			
+			System.out.printf("The amount of purchase %.2f%n", amount);
 		}
-		
 		endTask();
 	}
 	
