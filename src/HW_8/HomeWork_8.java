@@ -87,7 +87,7 @@ public abstract class HomeWork_8 {
 	public static void getQuantityOfLeapYears() {
 		int count = 0;
 		Scanner scanner = new Scanner(System.in);
-		System.out.println("Please input two years:");
+		System.out.println("Please enter two years:");
 		int years1 = scanner.nextInt();
 		int years2 = scanner.nextInt();
 		
