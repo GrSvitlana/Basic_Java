@@ -61,9 +61,9 @@ public abstract class HomeWork_8 {
 		int sum = 0;
 		
 		if (number1 > number2) {
-			int max = number2;
+			int temp = number2;
 			number2 = number1;
-			number1 = max;
+			number1 = temp;
 		} else if (number1 == number2) System.out.println("Both entered values are equal");
 		
 		for (int i = number1; i <= number2; i++) {
@@ -92,9 +92,9 @@ public abstract class HomeWork_8 {
 		int years2 = scanner.nextInt();
 		
 		if (years1 > years2) {
-			int max = years2;
+			int temp = years2;
 			years2 = years1;
-			years1 = max;
+			years1 = temp;
 		} else if (years1 == years2) System.out.println("Both entered values are equal");
 		
 		for (int i = years1; i <= years2; i++) {
