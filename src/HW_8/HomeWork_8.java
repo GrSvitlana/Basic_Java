@@ -44,10 +44,10 @@ public abstract class HomeWork_8 {
 		System.out.println(str + "\n");
 		
 		// do/while loop
-		int count2 = 5;
+		count = 5;
 		do {
-			System.out.println(count2--);
-		} while (count2 > 0);
+			System.out.println(count--);
+		} while (count > 0);
 		System.out.println(str + "\n");
 		
 		// for loop
