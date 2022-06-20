@@ -106,8 +106,7 @@ public abstract class HomeWork_8 {
 	}
 	
 	public static void checkPrime(int number) {
-		boolean check = true;
-		if (number <= 1) check = false;
+		boolean check = number > 1;
 		
 		for (int i = 2; i <= Math.sqrt(number); ++i) {
 			if (number % i == 0) {
