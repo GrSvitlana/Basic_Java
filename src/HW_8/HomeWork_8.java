@@ -1,8 +1,8 @@
 package HW_8;
 
 /*
-1. Implement method “countdown” that prints numbers from 5 to 1, than prints „start“. Implement it using both type of loop
-countdown() ->
+1. Implement method “countdown” that prints numbers from 5 to 1, then prints „start“. Implement it using both types
+of loop countdown() ->
 	5
     4
     3
@@ -10,16 +10,16 @@ countdown() ->
     1
     Start
 
-2. Given two integers number1 and number2. Implement method that returns the sum of all numbers between number1 and
- number2 that divisible by 3.Example: getSumDivisibleByTreeNumbers(20,10) -> 45
+2. Given two integers number1 and number2. Implement a method that returns the sum of all numbers between number1 and
+number2 that are divisible by 3. Example: getSumDivisibleByThree(20,10) -> 45
 
-3. Implement the program that read Integers from Scanner and prints the sum of all integers were input.
-The program will finish when 0 input.
+3. Implement a program that reads Integers from Scanner and prints the sum of all integers entered.
+The program will finish when 0 entered.
 
-4. Given two integers year1 and year2. Implement method that returns the quantity of leap years between
-year1 and year2.Example: getQuantityOfLeapYears (2000,2022) -> 6
+4. Given two integers year1 and year2. Implement a method that returns the quantity of leap years between
+year1 and year2. Example: getQuantityOfLeapYears (2000,2022) -> 6
 
-5. Implement the method that checks if the given number is prime
+5. Implement a method that checks if the given number is prime.
  */
 
 import java.util.Scanner;
@@ -27,7 +27,7 @@ import java.util.Scanner;
 public abstract class HomeWork_8 {
 	public static void main(String[] args) {
 		countdown();
-		System.out.println(getSumDivisibleByTreeNumbers(getNumber(), getNumber()));
+		System.out.println(getSumDivisibleByThree(getNumber(), getNumber()));
 		printSum();
 		getQuantityOfLeapYears();
 		checkPrime(getNumber());
@@ -57,7 +57,7 @@ public abstract class HomeWork_8 {
 		System.out.println();
 	}
 	
-	public static int getSumDivisibleByTreeNumbers(int number1, int number2) {
+	public static int getSumDivisibleByThree(int number1, int number2) {
 		int sum = 0;
 		
 		if (number1 > number2) {
