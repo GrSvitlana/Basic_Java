@@ -1,22 +1,22 @@
 package HW_7;
 
 /*
-1. Implement the program that takes the integer from Scanner –
-the number of day of month. Implement the method that takes this integer
-and returns the String the month or message: “illegal argument”.
+1. Implement a program that takes an integer from Scanner –
+the number of the month. Implement a method that takes this integer value
+and returns the String of the month or a message: “illegal argument”.
 Example: getMonthString(3) -> March;
  
-2. Implement the method that takes the month number and returns the season
- (winter, spring, summer or autumn) to which the month belongs.
+2. Implement a method that takes the number of the month and returns the season
+(winter, spring, summer or autumn) to which the month belongs.
 
 3. Imagine you are writing a program for a store. It should announce the promotion condition:
 ” You can get the BestWowSomething by the price 89.99$. But if you buy two articles then you
- get the discount 10% of all and if you buy three and more the discount will be 15% of all”.
- Then It should ask the user how many articles the user wants to buy. If the user input something more
- than 0 the program should print the amount of purchase, else displays “It's a pity. See you next time”
+ get a discount of 10% of all and if you buy three and more articles the discount will be 15% of all”.
+ Then It should ask the user how many articles the user wants to buy. If the user enters something more
+ than 0 the program should print the amount of purchases, else displays “It's a pity. See you next time”.
 
-4. Implement the program that ask user to input three integers (use Scanner),
-and print the maximum of three numbers. Implements this by using ternary operator: 19,10,1 ->19
+4. Implement a program that ask the user to enter three integers (using Scanner),
+and print the maximum of these three numbers. Implement this using the ternary operator: 19,10,1 ->19
  */
 
 import java.util.Scanner;
@@ -68,17 +68,17 @@ public class HomeWork_7 {
 	
 	public static void fourthTask() {
 		Scanner scanner = new Scanner(System.in);
-		System.out.println("Please input three integers numbers:");
+		System.out.println("Please enter three integer numbers:");
 		int first = scanner.nextInt();
 		int second = scanner.nextInt();
 		int third = scanner.nextInt();
 		
-		System.out.printf("The maximum of three numbers is %d", (first > second ? first : second) > third ? (first > second ? first : second) : third);
+		System.out.printf("The maximum of the three numbers is %d", (first > second ? first : second) > third ? (first > second ? first : second) : third);
 	}
 	
 	public static int takeNumberOfMonth() throws IllegalStateException {
 		Scanner scanner = new Scanner(System.in);
-		System.out.println("Please input the number of month: ");
+		System.out.println("Please enter the number of the month: ");
 		int numOfMonth = scanner.nextInt();
 		
 		if (numOfMonth <= 0 || numOfMonth > 12) {
