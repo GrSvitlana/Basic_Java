@@ -76,7 +76,7 @@ public class HomeWork_9 {
 				}
 			}
 		}
-		System.out.println("This array " + (flag ? ("has") : ("doesn't have")) + " a duplicate element.");
+		System.out.println("This array " + (flag ? "has" : "doesn't have") + " a duplicate element.");
 	}
 	
 	private static String enterString() {
