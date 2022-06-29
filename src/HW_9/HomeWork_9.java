@@ -20,6 +20,7 @@ public class HomeWork_9 {
 		changeChars();
 		returnBigIndexAndSum();
 		checkPalindrome();
+		checkDoubleArray(); //  Find duplicate elements in an array
 	}
 	
 	private static void changeChars() {
@@ -60,6 +61,22 @@ public class HomeWork_9 {
 			}
 		}
 		System.out.printf("The given string %s a palindrome", str);
+	}
+	
+	private static void checkDoubleArray() {
+		int n = arrayLength();
+		int[] intArray = readIntArray(n);
+		boolean flag = false;
+		
+		for (int i = 0; i < intArray.length; i++) {
+			for (int j = i + 1 ; j < intArray.length; j++) {
+				if (intArray[i] == intArray[j]) {
+					flag = true;
+					break;
+				}
+			}
+		}
+		System.out.println("This array " + (flag ? ("has") : ("doesn't have")) + " a duplicate element.");
 	}
 	
 	private static String enterString() {
