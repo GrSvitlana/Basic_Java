@@ -15,12 +15,17 @@ from the front and the back.
 
 import java.util.Scanner;
 
+import static HW_10.HomeWork_10.getInts;
+
 public class HomeWork_9 {
 	public static void main(String[] args) {
 		changeChars();
 		returnBigIndexAndSum();
 		checkPalindrome();
+		
 		checkDoubleArray(); //  Find duplicate elements in an array
+		System.out.println(fact(4)); // Iterative Implementation of Factorial
+		System.out.println(factRec(3)); // Recursive Definition Implementation of Factorial
 	}
 	
 	private static void changeChars() {
@@ -54,8 +59,8 @@ public class HomeWork_9 {
 		String str = "is";
 		int length = string.length();
 		
-		for (int i = 0; i < length/2; i++) {
-			if (string.charAt(i) != string.charAt(length - i - 1))  {
+		for (int i = 0; i < length / 2; i++) {
+			if (string.charAt(i) != string.charAt(length - i - 1)) {
 				str = "isn't";
 				break;
 			}
@@ -69,7 +74,7 @@ public class HomeWork_9 {
 		boolean flag = false;
 		
 		for (int i = 0; i < intArray.length; i++) {
-			for (int j = i + 1 ; j < intArray.length; j++) {
+			for (int j = i + 1; j < intArray.length; j++) {
 				if (intArray[i] == intArray[j]) {
 					flag = true;
 					break;
@@ -77,6 +82,21 @@ public class HomeWork_9 {
 			}
 		}
 		System.out.println("This array " + (flag ? "has" : "doesn't have") + " a duplicate element.");
+	}
+	
+	private static int fact(int n) {
+		int p = 1;
+		for (int i = 1; i <= n; i++) {
+			p *= i;
+		}
+		return p;
+	}
+	
+	private static int factRec(int n) {
+		if (n == 1) {
+			return 1;
+		}
+		return factRec(n - 1) * n;
 	}
 	
 	private static String enterString() {
@@ -97,19 +117,16 @@ public class HomeWork_9 {
 		return scanner.next().charAt(0);
 	}
 	
-	private static int arrayLength() {
+	private static int arrayLength() throws IllegalStateException {
 		Scanner scanner = new Scanner(System.in);
 		System.out.println("Please enter a length of an array:");
-		return scanner.nextInt();
+		int n = scanner.nextInt();
+		if (n <= 0) {
+			throw new IllegalStateException("The length of an array can not be under 0 value");
+		} else return n;
 	}
 	
 	private static int[] readIntArray(int n) {
-		int[] array = new int[n];
-		Scanner scanner = new Scanner(System.in);
-		System.out.println("Please enter the array values:");
-		for (int i = 0; i < n; i++) {
-			array[i] = scanner.nextInt();
-		}
-		return array;
+		return getInts(n);
 	}
 }
