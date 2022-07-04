@@ -109,7 +109,7 @@ public class HomeWork_10 {
 		int n = arrayLength();
 		int[] intArray = readIntArray(n);
 		
-		for (int i = 1; i < n; i++) {
+		for (int i = 0; i < n; i++) {
 			for (int j = 0; j < n - i; j++) {
 				if (intArray[j] > intArray[j + 1]) {
 					int temp = intArray[j];
