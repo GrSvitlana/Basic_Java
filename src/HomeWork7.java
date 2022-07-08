@@ -1,5 +1,3 @@
-package HW_7;
-
 /*
 1. Implement a program that takes an integer from Scanner –
 the number of the month. Implement a method that takes this integer value
@@ -21,7 +19,7 @@ and print the maximum of these three numbers. Implement this using the ternary o
 
 import java.util.Scanner;
 
-public class HomeWork_7 {
+public class HomeWork7 {
 	
 	public static void main(String[] args) {
 		

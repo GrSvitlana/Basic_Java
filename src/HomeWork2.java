@@ -1,8 +1,6 @@
-package HW_2;
-
 import java.util.Scanner;
 
-public class HomeWork_2 {
+public class HomeWork2 {
 	public static void main(String[] args) {
 		
 		firstTask();

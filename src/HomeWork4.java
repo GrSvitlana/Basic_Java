@@ -1,5 +1,3 @@
-package HW_4;
-
 import java.util.Scanner;
 
 /* First level:
@@ -28,7 +26,7 @@ Second level:
 
  */
 
-public class HomeWork_4 {
+public class HomeWork4 {
 	public static void main(String[] args) {
 		
 		firstTask();

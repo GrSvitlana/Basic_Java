@@ -1,5 +1,3 @@
-package HW_5;
-
 import java.util.Calendar;
 import java.util.Scanner;
 
@@ -24,7 +22,7 @@ Second level:
 Написать метод, который в качестве параметра принимает номер года и
 возвращает true, если год високосный и false, если год невисокосный.
  */
-public class HomeWork_5 {
+public class HomeWork5 {
 	public static void main(String[] args) {
 		
 		firstTask();

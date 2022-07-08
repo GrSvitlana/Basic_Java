@@ -1,5 +1,3 @@
-package HW_8;
-
 /*
 1. Implement method “countdown” that prints numbers from 5 to 1, then prints „start“. Implement it using both types
 of loop countdown() ->
@@ -24,7 +22,7 @@ year1 and year2. Example: getQuantityOfLeapYears (2000,2022) -> 6
 
 import java.util.Scanner;
 
-public abstract class HomeWork_8 {
+public abstract class HomeWork8 {
 	public static void main(String[] args) {
 		countdown();
 		System.out.println(getSumDivisibleByThree(getNumber(), getNumber()));

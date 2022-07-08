@@ -1,5 +1,3 @@
-package HW_9;
-
 /*
 1. Write a method that takes a String and two chars. As the result it returns the given String,
 where each the first char was replaced by the second char. You have to use only length() and charAt() methods
@@ -15,9 +13,7 @@ from the front and the back.
 
 import java.util.Scanner;
 
-import static HW_10.HomeWork_10.getInts;
-
-public class HomeWork_9 {
+public class HomeWork9 {
 	public static void main(String[] args) {
 		changeChars();
 		returnBigIndexAndSum();
@@ -128,5 +124,15 @@ public class HomeWork_9 {
 	
 	private static int[] readIntArray(int n) {
 		return getInts(n);
+	}
+	
+	public static int[] getInts(int n) {
+		int[] array = new int[n];
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("Please enter the array values:");
+		for (int i = 0; i < n; i++) {
+			array[i] = scanner.nextInt();
+		}
+		return array;
 	}
 }
