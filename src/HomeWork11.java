@@ -60,7 +60,7 @@ the row is greater than 0.
 		double sum = 0;
 		int numberOfRows = array.length;
 		int numberOfColumns = array[0].length;
-		String str = null;
+		String str;
 		
 		if (rowNumber >= numberOfRows) {
 			System.err.println("Error! Row number bigger than array size.");
