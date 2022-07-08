@@ -70,14 +70,11 @@ the row is greater than 0.
 			}
 			double average = sum / numberOfColumns;
 			if (average > 0) {
-				str = "is greater than 0";
-			} else if (average < 0) {
-				str = "is less than 0";
+				str = " is greater than 0.";
 			} else {
-				str = "is 0";
+				str = " is less than or equal to 0.";
 			}
-			System.out.println("The average of the elements in\n" +
-					"the row" + rowNumber + str);
+			System.out.println("The average of the elements in row " + rowNumber + str);
 		}
 	}
 	
