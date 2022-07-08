@@ -109,7 +109,7 @@ the row is greater than 0.
 	
 	private static int rowNumber() {
 		Scanner scanner = new Scanner(System.in);
-		System.out.println("Please enter a row number that the average of the elements in\nthe row is greater than 0\nrow = ");
+		System.out.println("Please enter a row number: ");
 		return scanner.nextInt();
 	}
 }
