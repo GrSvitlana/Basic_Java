@@ -1,9 +1,12 @@
-/*
-1. Implement a program that takes an integer from Scanner –
+import java.util.Scanner;
+
+public class HomeWork7 {
+
+/* 1. Implement a program that takes an integer from Scanner –
 the number of the month. Implement a method that takes this integer value
 and returns the String of the month or a message: “illegal argument”.
 Example: getMonthString(3) -> March;
- 
+
 2. Implement a method that takes the number of the month and returns the season
 (winter, spring, summer or autumn) to which the month belongs.
 
@@ -16,11 +19,6 @@ Example: getMonthString(3) -> March;
 4. Implement a program that ask the user to enter three integers (using Scanner),
 and print the maximum of these three numbers. Implement this using the ternary operator: 19,10,1 ->19
  */
-
-import java.util.Scanner;
-
-public class HomeWork7 {
-	
 	public static void main(String[] args) {
 		
 		firstTask();

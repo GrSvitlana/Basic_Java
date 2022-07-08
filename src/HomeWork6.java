@@ -1,15 +1,13 @@
-/*
-1. Imagine you are writing a program for a cinema. The method you should create takes two arguments.
+import java.util.Scanner;
+public class HomeWork6 {
+
+/* 1. Imagine you are writing a program for a cinema. The method you should create takes two arguments.
 The first is the age of the person; the second is an age limit of the film.
 The method should print if this film allowed for the person or not.
 
 2. Implement a program that ask the user to enter three integers (using Scanner),
 and print the maximum of these three numbers. 19,10,1 ->19
  */
-
-import java.util.Scanner;
-
-public class HomeWork6 {
 	public static void main(String[] args) {
 		task1();
 		task2();

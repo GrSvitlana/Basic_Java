@@ -1,6 +1,8 @@
 import java.util.Calendar;
 import java.util.Scanner;
 
+public class HomeWork5 {
+
 /*
 First level:
 1. Create two variables isWeekend and isRain. Create the variable canWalk whose
@@ -22,7 +24,6 @@ Second level:
 Написать метод, который в качестве параметра принимает номер года и
 возвращает true, если год високосный и false, если год невисокосный.
  */
-public class HomeWork5 {
 	public static void main(String[] args) {
 		
 		firstTask();

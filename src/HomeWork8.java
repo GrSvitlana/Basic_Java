@@ -1,13 +1,16 @@
-/*
-1. Implement method “countdown” that prints numbers from 5 to 1, then prints „start“. Implement it using both types
-of loop countdown() ->
-	5
-    4
-    3
-    2
-    1
-    Start
+import java.util.Scanner;
 
+public abstract class HomeWork8 {
+
+/* 1. Implement method “countdown” that prints numbers from 5 to 1, then prints „start“. Implement it using both types
+of loop countdown() ->
+		5
+		4
+		3
+		2
+		1
+		Start
+	
 2. Given two integers number1 and number2. Implement a method that returns the sum of all numbers between number1 and
 number2 that are divisible by 3. Example: getSumDivisibleByThree(20,10) -> 45
 
@@ -19,10 +22,6 @@ year1 and year2. Example: getQuantityOfLeapYears (2000,2022) -> 6
 
 5. Implement a method that checks if the given number is prime.
  */
-
-import java.util.Scanner;
-
-public abstract class HomeWork8 {
 	public static void main(String[] args) {
 		countdown();
 		System.out.println(getSumDivisibleByThree(getNumber(), getNumber()));

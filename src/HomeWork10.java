@@ -1,3 +1,8 @@
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class HomeWork10 {
+
 /*
 1. Implement a method that returns a new array of int. Every element of the array is the next power of two.
 The length of the array is given as n (the max value of n is 30. Why do you think?) powerOfTwo (5) -> {1,2,4,8,16}
@@ -16,12 +21,6 @@ merge(int[], int[]) that merges these arrays into a single sorted array.
 5. Try to develop and program an algorithm to sort a one-dimensional array. Learning about known methods and
 implement one of them is acceptable.
  */
-
-
-import java.util.Arrays;
-import java.util.Scanner;
-
-public class HomeWork10 {
 	public static void main(String[] args) {
 		powerOfTwo();
 		arrayReverse();

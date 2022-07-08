@@ -1,5 +1,7 @@
 import java.util.Scanner;
 
+public class HomeWork4 {
+
 /* First level:
 1. Напишите метод, вычисляющий выражение a * (b + (c / d)) и возвращающий результат,
 где a, b, c, d — целочисленные входные параметры этого метода.
@@ -25,8 +27,6 @@ Second level:
 с плавающей точкой, и выведи округлённое до 3 знаков после запятой.
 
  */
-
-public class HomeWork4 {
 	public static void main(String[] args) {
 		
 		firstTask();

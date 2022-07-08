@@ -1,6 +1,7 @@
 import java.util.Random;
 import java.util.Scanner;
 
+public class HomeWork11 {
 /*
 1. In this assignment you should write a program that creates a new array int[n][m],
 fill it with random integers and displays it.
@@ -10,8 +11,6 @@ the row is greater than 0.
 
 3. A square array (same number of rows and columns) filled with zeros is given. Fill both diagonals with ones.
  */
-
-public class HomeWork11 {
 	
 	public static void main(String[] args) {
 		
@@ -57,19 +56,28 @@ public class HomeWork11 {
 	}
 	
 	private static void checkAverage(int[][] array, int rowNumber) {
-	
+		
 		double sum = 0;
 		int numberOfRows = array.length;
 		int numberOfColumns = array[0].length;
+		String str = null;
 		
 		if (rowNumber >= numberOfRows) {
 			System.err.println("Error! Row number bigger than array size.");
 		} else {
-				for (int j = 0; j < numberOfColumns; j++) {
-					sum += array[rowNumber][j];
-				}
-				double average = sum / numberOfColumns;
-				System.out.println(average);
+			for (int j = 0; j < numberOfColumns; j++) {
+				sum += array[rowNumber][j];
+			}
+			double average = sum / numberOfColumns;
+			if (average > 0) {
+				str = "is greater than 0";
+			} else if (average < 0) {
+				str = "is less than 0";
+			} else {
+				str = "is 0";
+			}
+			System.out.println("The average of the elements in\n" +
+					"the row" + rowNumber + str);
 		}
 	}
 	

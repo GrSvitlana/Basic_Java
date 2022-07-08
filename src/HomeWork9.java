@@ -1,3 +1,7 @@
+import java.util.Scanner;
+
+public class HomeWork9 {
+
 /*
 1. Write a method that takes a String and two chars. As the result it returns the given String,
 where each the first char was replaced by the second char. You have to use only length() and charAt() methods
@@ -10,10 +14,6 @@ of String class.For example: “I always do my homework”, ‘a’, ‘A’ -> 
 4. Write method that checks whether a given string is a palindrome. A palindrome is a phrase that reads the same
 from the front and the back.
  */
-
-import java.util.Scanner;
-
-public class HomeWork9 {
 	public static void main(String[] args) {
 		changeChars();
 		returnBigIndexAndSum();
