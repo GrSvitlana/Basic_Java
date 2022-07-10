@@ -39,17 +39,12 @@ the row is greater than 0.
 					array[i][j] = random.nextInt();
 				}
 			}
-			
-			for (int[] ints : array) {
-				for (int j = 0; j < array[0].length; j++) {
-					System.out.print(ints[j] + " ");
-				}
-				System.out.println();
-			}
+
+			print2dArray(array);
 			System.out.println();
 			
 		} else {
-			System.err.println("The array dimension must be greater than 0");
+			System.err.println("The array dimension must be greater than 0\n");
 		}
 		
 		return array;
@@ -76,6 +71,7 @@ the row is greater than 0.
 			}
 			System.out.println("The average of the elements in row " + rowNumber + str);
 		}
+		System.out.println();
 	}
 	
 	private static void squareMatrix() {
