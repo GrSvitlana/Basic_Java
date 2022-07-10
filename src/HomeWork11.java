@@ -5,10 +5,8 @@ public class HomeWork11 {
 /*
 1. In this assignment you should write a program that creates a new array int[n][m],
 fill it with random integers and displays it.
-
 2.Implement a method that takes an int[][] array and a row number and checks that the average of the elements in
 the row is greater than 0.
-
 3. A square array (same number of rows and columns) filled with zeros is given. Fill both diagonals with ones.
  */
 	
