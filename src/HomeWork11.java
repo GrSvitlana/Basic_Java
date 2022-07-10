@@ -39,7 +39,7 @@ the row is greater than 0.
 					array[i][j] = random.nextInt();
 				}
 			}
-
+			
 			print2dArray(array);
 			System.out.println();
 			
@@ -82,14 +82,11 @@ the row is greater than 0.
 		
 		int[][] array = new int[n][n];
 		
-		int count = n-1;
+		int count = n - 1;
 		
 		for (int i = 0; i < n; i++) {
-			for (int j = 0; j < n; j++) {
-						array[i][i] = 1;
-						array[count][i] = 1;
-					}
-			count--;
+			array[i][i] = 1;
+			array[count--][i] = 1;
 		}
 		print2dArray(array);
 	}
