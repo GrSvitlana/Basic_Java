@@ -84,7 +84,7 @@ the row is greater than 0.
 		
 		for (int i = 0; i < n; i++) {
 			array[i][i] = 1;
-			array[count--][i] = 1;
+			array[i][count--] = 1;
 		}
 		print2dArray(array);
 	}
