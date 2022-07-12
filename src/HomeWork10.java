@@ -118,7 +118,7 @@ implement one of them is acceptable.
 		System.out.println(Arrays.toString(intArray));
 	}
 	
-	private static int arrayLength() throws IllegalStateException {
+	public static int arrayLength() throws IllegalStateException {
 		Scanner scanner = new Scanner(System.in);
 		System.out.println("Please enter a length of an array:");
 		int n = scanner.nextInt();

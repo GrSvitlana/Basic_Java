@@ -1,12 +1,13 @@
-import java.util.Random;
 import java.util.Scanner;
-
+import java.util.concurrent.ThreadLocalRandom;
 public class HomeWork11 {
 /*
 1. In this assignment you should write a program that creates a new array int[n][m],
 fill it with random integers and displays it.
+
 2.Implement a method that takes an int[][] array and a row number and checks that the average of the elements in
 the row is greater than 0.
+
 3. A square array (same number of rows and columns) filled with zeros is given. Fill both diagonals with ones.
  */
 	
@@ -18,8 +19,6 @@ the row is greater than 0.
 	}
 	
 	private static int[][] createArray() {
-		
-		Random random = new Random();
 		
 		Scanner scanner = new Scanner(System.in);
 		System.out.println("Please enter the size of an array[rows][cols]: ");
@@ -34,12 +33,11 @@ the row is greater than 0.
 			array = new int[rows][cols];
 			for (int i = 0; i < array.length; i++) {
 				for (int j = 0; j < array[0].length; j++) {
-					array[i][j] = random.nextInt();
+					array[i][j] = ThreadLocalRandom.current().nextInt(-100, 100);
 				}
 			}
 			
 			print2dArray(array);
-			System.out.println();
 			
 		} else {
 			System.err.println("The array dimension must be greater than 0\n");
@@ -50,41 +48,35 @@ the row is greater than 0.
 	
 	private static void checkAverage(int[][] array, int rowNumber) {
 		
-		double sum = 0;
 		int numberOfRows = array.length;
 		int numberOfColumns = array[0].length;
+		double sum = 0;
 		String str;
 		
 		if (rowNumber >= numberOfRows) {
 			System.err.println("Error! Row number bigger than array size.");
 		} else {
-			for (int j = 0; j < numberOfColumns; j++) {
-				sum += array[rowNumber][j];
+			for (int i = 0; i < numberOfColumns; i++) {
+				sum += array[rowNumber][i];
 			}
-			double average = sum / numberOfColumns;
-			if (average > 0) {
+			
+			if ((sum / numberOfColumns) > 0) {
 				str = " is greater than 0.";
 			} else {
 				str = " is less than or equal to 0.";
 			}
-			System.out.println("The average of the elements in row " + rowNumber + str);
+			System.out.println("The average of the elements in row " + rowNumber + str + "\n");
 		}
-		System.out.println();
 	}
 	
 	private static void squareMatrix() {
 		
-		Scanner scanner = new Scanner(System.in);
-		System.out.println("Please enter the number of rows of a square array: ");
-		int n = scanner.nextInt();
+		int n = HomeWork10.arrayLength();
 		
 		int[][] array = new int[n][n];
 		
-		int count = n - 1;
-		
 		for (int i = 0; i < n; i++) {
-			array[i][i] = 1;
-			array[i][count--] = 1;
+			array[i][i] = array[i][n - i - 1] = 1;
 		}
 		print2dArray(array);
 	}
