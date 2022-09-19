@@ -1,0 +1,55 @@
+/*
+Написать метод,
+возвращающий целое число
+равное двойной строки
+принимаемой в качестве аргумента метода.
+
+Пример: hello -> 10
+
+Написать 2 метода: один метод переставляет первую букву в конец строки (abcd-> bcda).
+Второй  метод переставляет последнюю букву в начало строки (abcd->dabc)
+ */
+
+import java.util.Arrays;
+
+public class mvLetter {
+	public static void main(String[] args) {
+		String str = "hello";
+		System.out.println(str + " -> " + doubleLongOfString(str));
+		
+		String letters = "abcd";
+		System.out.println(moveLetterR(letters));
+		System.out.println(moveLetterL(letters));
+		
+		String letters2 = "abcdefghijklmnopqrstuvwxyz";
+		System.out.println(moveLetterR(letters2));
+		System.out.println(moveLetterL(letters2));
+	}
+	
+	private static int doubleLongOfString(String str) {
+		int x = str.length() * 2;
+		return x;
+	}
+	
+	private static char[] moveLetterR(String str) {
+		char[] arr = str.toCharArray();
+		char[] arrN = new char[arr.length];
+		int j = -arr.length - 1;
+		while (j < 0) j += arr.length;
+		for (int i = 0; i < arr.length; i++) {
+			arrN[Math.abs((i + j) % arr.length)] = arr[i];
+		}
+		return arrN;
+	}
+	
+	private static char[] moveLetterL(String str) {
+		char[] arr = str.toCharArray();
+		char[] arrN = new char[arr.length];
+		int j = -arr.length - 3;
+		while (j < 0) j += arr.length;
+		for (int i = 0; i < arr.length; i++) {
+			arrN[Math.abs((i + j) % arr.length)] = arr[i];
+		}
+		return arrN;
+	}
+}
