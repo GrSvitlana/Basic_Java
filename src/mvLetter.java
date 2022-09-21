@@ -17,13 +17,9 @@ public class mvLetter {
 		String str = "hello";
 		System.out.println(str + " -> " + doubleLongOfString(str));
 		
-		String letters = "abcd";
-		System.out.println(moveLetterR(letters));
-		System.out.println(moveLetterL(letters));
-		
-		String letters2 = "abcdefghijklmnopqrstuvwxyz";
-		System.out.println(moveLetterR(letters2));
-		System.out.println(moveLetterL(letters2));
+		String letters = "abcdefghijklmnpqrsuvwxyz";
+		System.out.println(moveLetterR(letters, -1));
+		System.out.println(moveLetterR(letters, 3));
 	}
 	
 	private static int doubleLongOfString(String str) {
@@ -31,21 +27,10 @@ public class mvLetter {
 		return x;
 	}
 	
-	private static char[] moveLetterR(String str) {
+	private static char[] moveLetterR(String str, int k) {
 		char[] arr = str.toCharArray();
 		char[] arrN = new char[arr.length];
-		int j = -arr.length - 1;
-		while (j < 0) j += arr.length;
-		for (int i = 0; i < arr.length; i++) {
-			arrN[Math.abs((i + j) % arr.length)] = arr[i];
-		}
-		return arrN;
-	}
-	
-	private static char[] moveLetterL(String str) {
-		char[] arr = str.toCharArray();
-		char[] arrN = new char[arr.length];
-		int j = -arr.length - 3;
+		int j = -arr.length - k;
 		while (j < 0) j += arr.length;
 		for (int i = 0; i < arr.length; i++) {
 			arrN[Math.abs((i + j) % arr.length)] = arr[i];
